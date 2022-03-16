@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<!--favicon icon-->
+	<link rel="icon" href="#" type="image/png" sizes="16x16">
+	<!--title-->
+	<title>Document</title>
+
+	<!-- from photo gallery -->
+	<link rel="stylesheet" type="text/css" href="css/gallery.css" />
+	<script src="js/TweenMax.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+
+	<!--build:css-pattern-->
+	<link rel="stylesheet" href="css/main.min.css">
+
+
+	<!--build:css-->
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+	<!-- from photo gallery -->
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="filters hidden" style="display: none">
+		<defs>
+			<filter id="blur">
+				<feGaussianBlur in="SourceGraphic" stdDeviation="0,0" />
+			</filter>
+		</defs>
+	</svg>
+
+	<!--header section-->
+	<header id="header" class="header-main">
+		<!--main header menu start-->
+		<div id="logoAndNav" class="main-header-menu-wrap bg-transparent fixed-top">
+			<div class="container">
+				<nav class="js-mega-menu navbar navbar-expand-md header-nav">
+
+					<!--responsive toggle button start-->
+					<button type="button" class="navbar-toggler btn" aria-expanded="false" aria-controls="navBar"
+						data-toggle="collapse" data-target="#navBar">
+						<span id="hamburgerTrigger">
+							<span class="ti-menu"></span>
+						</span>
+					</button>
+					<!--responsive toggle button end-->
+
+					<!--main menu start-->
+					<div id="navBar" class="collapse navbar-collapse">
+						<ul class="navbar-nav ml-auto main-navbar-nav">
+
+							<!--main-->
+							<li class="nav-item custom-nav-item">
+								<a class="nav-link custom-nav-link" href="#">Главная</a>
+							</li>
+
+							<!--about us-->
+							<li class="nav-item hs-has-sub-menu custom-nav-item">
+								<a id="pagesMegaMenu" class="nav-link custom-nav-link main-link-toggle"
+									href="javascript:void(0);" aria-haspopup="true" aria-expanded="false"
+									aria-labelledby="pagesSubMenu">О нас</a>
+
+								<!-- about us - submenu -->
+								<ul id="pagesSubMenu" class="hs-sub-menu main-sub-menu" aria-labelledby="pagesMegaMenu"
+									style="min-width: 230px;">
+									<li class="nav-item submenu-item">
+										<a class="nav-link sub-menu-nav-link" href="#">Администрация</a>
+									</li>
+									<li class="nav-item submenu-item">
+										<a class="nav-link sub-menu-nav-link" href="#">Тренерская</a>
+									</li>
+									<li class="nav-item submenu-item">
+										<a class="nav-link sub-menu-nav-link" href="#">Попечительский совет</a>
+									</li>
+									<li class="nav-item submenu-item">
+										<a class="nav-link sub-menu-nav-link" href="#about">Наши контакты</a>
+									</li>
+								</ul>
+							</li>
+
+							<!--new`s-->
+							<li class="nav-item custom-nav-item">
+								<a class="nav-link custom-nav-link" href="#">Новости</a>
+							</li>
+
+							<!--сlasses-->
+							<li class="nav-item custom-nav-item">
+								<a class="nav-link custom-nav-link" href="#">Расписание занятий</a>
+							</li>
+
+							<!--legislation-->
+							<li class="nav-item custom-nav-item">
+								<a class="nav-link custom-nav-link" href="#">Законодательство</a>
+							</li>
+
+							<!--services-->
+							<li class="nav-item hs-has-sub-menu custom-nav-item">
+								<a id="pagesMegaMenu" class="nav-link custom-nav-link main-link-toggle"
+									href="javascript:void(0);" aria-haspopup="true" aria-expanded="false"
+									aria-labelledby="pagesSubMenu">Платные услуги</a>
+
+								<!-- services - submenu -->
+								<ul id="pagesSubMenu" class="hs-sub-menu main-sub-menu" aria-labelledby="pagesMegaMenu"
+									style="min-width: 230px;">
+									<li class="nav-item submenu-item">
+										<a class="nav-link sub-menu-nav-link" href="#">Отделение плавания</a>
+									</li>
+									<li class="nav-item submenu-item">
+										<a class="nav-link sub-menu-nav-link" href="#">Отделение тениса</a>
+									</li>
+									<li class="nav-item submenu-item">
+										<a class="nav-link sub-menu-nav-link" href="#">Отделение настольного тениса</a>
+									</li>
+									<li class="nav-item submenu-item">
+										<a class="nav-link sub-menu-nav-link" href="#">Отделение шашек</a>
+									</li>
+									<li class="nav-item submenu-item">
+										<a class="nav-link sub-menu-nav-link" href="#">Отделение шахмат</a>
+									</li>
+									<li class="nav-item submenu-item">
+										<a class="nav-link sub-menu-nav-link" href="#">Прейскурант</a>
+									</li>
+								</ul>
+							</li>
+
+							<!--history-->
+							<li class="nav-item hs-has-sub-menu custom-nav-item">
+								<a id="pagesMegaMenu" class="nav-link custom-nav-link main-link-toggle"
+									href="javascript:void(0);" aria-haspopup="true" aria-expanded="false"
+									aria-labelledby="pagesSubMenu">История</a>
+
+								<!-- history - submenu -->
+								<ul id="pagesSubMenu" class="hs-sub-menu main-sub-menu" aria-labelledby="pagesMegaMenu"
+									style="min-width: 230px;">
+									<li class="nav-item submenu-item">
+										<a class="nav-link sub-menu-nav-link" href="#">Плавание</a>
+									</li>
+									<li class="nav-item submenu-item">
+										<a class="nav-link sub-menu-nav-link" href="#">Тенис</a>
+									</li>
+									<li class="nav-item submenu-item">
+										<a class="nav-link sub-menu-nav-link" href="#">Настольный тенис</a>
+									</li>
+									<li class="nav-item submenu-item">
+										<a class="nav-link sub-menu-nav-link" href="#">Шашки</a>
+									</li>
+									<li class="nav-item submenu-item">
+										<a class="nav-link sub-menu-nav-link" href="#">Шахматы</a>
+									</li>
+									<li class="nav-item submenu-item">
+										<a class="nav-link sub-menu-nav-link" href="#">Чемпионы</a>
+									</li>
+								</ul>
+							</li>
+
+							<!--photo gallery-->
+							<li class="nav-item custom-nav-item">
+								<a class="nav-link custom-nav-link" href="#">Фотогалерея</a>
+							</li>
+
+						</ul>
+					</div>
+					<!--main menu end-->
+				</nav>
+			</div>
+		</div>
+		<!--main header menu end-->
+	</header>
+
+	<div class="main">
+
+		<!--about school-->
+		<section class="ptb-100 overflow-hidden primary-bg about">
+			<div class="container">
+				<div
+					class="row align-items-center justify-content-lg-between justify-content-md-center justify-content-sm-center">
+					<div class="col-md-12 col-lg-6">
+						<div class="hero-slider-content text-white py-5">
+							<h1 class="text-white">О школе</h1>
+							<p class="lead">Я впервые пользуюсь гитхабом. ипсум долоре, так сказать. Dolor sittt amet
+								consectetur, adipisicing elit. Repellendus ullam
+								quas sunt tempore corrupti quaerat enim reiciendis minus sed cum numquam aliquid
+								doloribus incidunt, quae mollitia reprehenderit sapiente est porro!</p>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-12 col-lg-6">
+						<div class="img-wrap">
+							<img src="https://dummyimage.com/200x200" alt="logo_school" class="img-fluid">
+						</div>
+					</div>
+				</div>
+				<!--end of row-->
+
+				<!-- federations -->
+				<div class="federations">
+					<ul>
+						<li><a href="https://tennis.by/#" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Федерация тенниса"><img src="img/logo/logo_tenis.png" alt="Федерация тенниса"></a></li>
+						<li><a href="http://bttf.by/index.php/ru/" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Федерация настольного тенниса"><img src="img/logo/logo_table_tenis.png" alt="Федерация настольного тенниса"></a></li>
+						<li><a href="https://openchess.by/" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Федерация шахмат"><img src="img/logo/logo_chess.png" alt="Федерация шахмат"></a></li>
+						<li><a href="http://belarus.fmjd.org/" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Федерация шашек"><img src="img/logo/logo_shashki.jpg" alt="Федерация шашек"></a></li>
+						<li><a href="http://blrswimming.by/index.php" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Федерация плавания"><img src="img/logo/logo_swimming.png" alt="Федерация плавания"></a></li>
+					</ul>
+				</div>
+				<!--end of container-->
+
+			</div>
+		</section>
+
+		<!--news-->
+		<section class="review-section ptb-80 gray-light-bg news">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-10 col-lg-7">
+						<div class="section-heading text-center">
+							<h2>Новости</h2>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="owl-carousel owl-theme client-testimonial-1 dot-bottom-center custom-dot">
+						<div class="item">
+							<div
+								class="single-partner-wrap card-bottom-line bg-white border rounded text-center p-4 mt-4">
+								<div class="partner-logo mb-3">
+									<img src="https://dummyimage.com/250x250" alt="news_image" class="img-fluid">
+								</div>
+								<div class="partner-heading mb-2">
+									<h5 class="mb-0">Название новости</h5>
+								</div>
+								<div class="partner-info">
+									<p>Какое-то кол-во символов ново...</p>
+									<a href="#" class="view-details-link">Get more info<span
+											class="ti-angle-right"></span></a>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div
+								class="single-partner-wrap card-bottom-line bg-white border rounded text-center p-4 mt-4">
+								<div class="partner-logo mb-3">
+									<img src="https://dummyimage.com/250x250" alt="news_image" class="img-fluid">
+								</div>
+								<div class="partner-heading mb-2">
+									<h5 class="mb-0">Название новости</h5>
+								</div>
+								<div class="partner-info">
+									<p>Какое-то кол-во символов ново...</p>
+									<a href="#" class="view-details-link">Get more info<span
+											class="ti-angle-right"></span></a>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div
+								class="single-partner-wrap card-bottom-line bg-white border rounded text-center p-4 mt-4">
+								<div class="partner-logo mb-3">
+									<img src="https://dummyimage.com/250x250" alt="news_image" class="img-fluid">
+								</div>
+								<div class="partner-heading mb-2">
+									<h5 class="mb-0">Название новости</h5>
+								</div>
+								<div class="partner-info">
+									<p>Какое-то кол-во символов ново...</p>
+									<a href="#" class="view-details-link">Get more info<span
+											class="ti-angle-right"></span></a>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div
+								class="single-partner-wrap card-bottom-line bg-white border rounded text-center p-4 mt-4">
+								<div class="partner-logo mb-3">
+									<img src="https://dummyimage.com/250x250" alt="news_image" class="img-fluid">
+								</div>
+								<div class="partner-heading mb-2">
+									<h5 class="mb-0">Название новости</h5>
+								</div>
+								<div class="partner-info">
+									<p>Какое-то кол-во символов ново...</p>
+									<a href="#" class="view-details-link">Get more info<span
+											class="ti-angle-right"></span></a>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div
+								class="single-partner-wrap card-bottom-line bg-white border rounded text-center p-4 mt-4">
+								<div class="partner-logo mb-3">
+									<img src="https://dummyimage.com/250x250" alt="news_image" class="img-fluid">
+								</div>
+								<div class="partner-heading mb-2">
+									<h5 class="mb-0">Название новости</h5>
+								</div>
+								<div class="partner-info">
+									<p>Какое-то кол-во символов ново...</p>
+									<a href="#" class="view-details-link">Get more info<span
+											class="ti-angle-right"></span></a>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div
+								class="single-partner-wrap card-bottom-line bg-white border rounded text-center p-4 mt-4">
+								<div class="partner-logo mb-3">
+									<img src="https://dummyimage.com/250x250" alt="news_image" class="img-fluid">
+								</div>
+								<div class="partner-heading mb-2">
+									<h5 class="mb-0">Название новости</h5>
+								</div>
+								<div class="partner-info">
+									<p>Какое-то кол-во символов ново...</p>
+									<a href="#" class="view-details-link">Get more info<span
+											class="ti-angle-right"></span></a>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div
+								class="single-partner-wrap card-bottom-line bg-white border rounded text-center p-4 mt-4">
+								<div class="partner-logo mb-3">
+									<img src="https://dummyimage.com/250x250" alt="news_image" class="img-fluid">
+								</div>
+								<div class="partner-heading mb-2">
+									<h5 class="mb-0">Название новости</h5>
+								</div>
+								<div class="partner-info">
+									<p>Какое-то кол-во символов ново...</p>
+									<a href="#" class="view-details-link">Get more info<span
+											class="ti-angle-right"></span></a>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div
+								class="single-partner-wrap card-bottom-line bg-white border rounded text-center p-4 mt-4">
+								<div class="partner-logo mb-3">
+									<img src="https://dummyimage.com/250x250" alt="news_image" class="img-fluid">
+								</div>
+								<div class="partner-heading mb-2">
+									<h5 class="mb-0">Название новости</h5>
+								</div>
+								<div class="partner-info">
+									<p>Какое-то кол-во символов ново...</p>
+									<a href="#" class="view-details-link">Get more info<span
+											class="ti-angle-right"></span></a>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div
+								class="single-partner-wrap card-bottom-line bg-white border rounded text-center p-4 mt-4">
+								<div class="partner-logo mb-3">
+									<img src="https://dummyimage.com/250x250" alt="news_image" class="img-fluid">
+								</div>
+								<div class="partner-heading mb-2">
+									<h5 class="mb-0">Название новости</h5>
+								</div>
+								<div class="partner-info">
+									<p>Какое-то кол-во символов ново...</p>
+									<a href="#" class="view-details-link">Get more info<span
+											class="ti-angle-right"></span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<a href="#" class="btn btn-outline-brand-01 mt-3" target="_blank">Смотреть все</a>
+			</div>
+		</section>
+
+		<!--briefly about everything-->
+		<div class="feature-section ptb-60 briefly">
+			<div class="container">
+				<div class="row align-items-center justify-content-between">
+					<div class="col-md-7 col-lg-6">
+						<div class="feature-content-wrap">
+							<h2>Расписания занятий</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est voluptatibus alias ipsum
+								obcaecati aspernatur voluptas odit quae repellat optio fugit, modi debitis, dolorem in
+								molestiae accusamus, quidem quod suscipit neque.</p>
+							<a href="#" class="btn btn-outline-brand-01 mt-3" target="_blank">Смотреть все</a>
+						</div>
+					</div>
+					<div class="col-md-5 col-lg-5 d-none d-md-block d-lg-block">
+						<div class="feature-img-wrap text-center">
+							<img src="https://dummyimage.com/300x200" class="img-fluid" alt="server room">
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class="row align-items-center justify-content-between mt-5">
+					<div class="col-md-5 col-lg-5 d-none d-md-block d-lg-block">
+						<div class="feature-img-wrap text-center">
+							<img src="https://dummyimage.com/300x200" class="img-fluid" alt="server room">
+						</div>
+					</div>
+					<div class="col-md-7 col-lg-6">
+						<div class="feature-content-wrap">
+							<h2>Законодательство</h2>
+							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque consectetur doloremque
+								quidem itaque nihil maiores vero saepe, inventore perferendis laboriosam. Obcaecati,
+								sunt labore et perspiciatis ex distinctio perferendis praesentium sint.</p>
+							<a href="#" class="btn btn-outline-brand-01 mt-3" target="_blank">Смотреть все</a>
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class="row align-items-center justify-content-between mt-5">
+					<div class="col-md-7 col-lg-6">
+						<div class="feature-content-wrap">
+							<h2>Платные услуги</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est voluptatibus alias ipsum
+								obcaecati aspernatur voluptas odit quae repellat optio fugit, modi debitis, dolorem in
+								molestiae accusamus, quidem quod suscipit neque.</p>
+							<a href="#" class="btn btn-outline-brand-01 mt-3" target="_blank">Смотреть все</a>
+						</div>
+					</div>
+					<div class="col-md-5 col-lg-5 d-none d-md-block d-lg-block">
+						<div class="feature-img-wrap text-center">
+							<img src="https://dummyimage.com/300x200" class="img-fluid" alt="server room">
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class="row align-items-center justify-content-between mt-5">
+					<div class="col-md-5 col-lg-5 d-none d-md-block d-lg-block">
+						<div class="feature-img-wrap text-center">
+							<img src="https://dummyimage.com/300x200" class="img-fluid" alt="server room">
+						</div>
+					</div>
+					<div class="col-md-7 col-lg-6">
+						<div class="feature-content-wrap">
+							<h2>История</h2>
+							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque consectetur doloremque
+								quidem itaque nihil maiores vero saepe, inventore perferendis laboriosam. Obcaecati,
+								sunt labore et perspiciatis ex distinctio perferendis praesentium sint.</p>
+							<a href="#" class="btn btn-outline-brand-01 mt-3" target="_blank">Смотреть все</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--photo gallery-->
+		<div class="gallery">
+			<h2>Фотогаллерея</h2>
+			<ul class="gallery-pictures">
+				<li class="gallery-picture">
+					<div class="block-img"><img src="https://dummyimage.com/700x300" alt="img01"></div>
+				</li>
+				<li class="gallery-picture">
+					<div class="block-img"><img src="https://picsum.photos/1000/300" alt="img02"></div>
+				</li>
+				<li class="gallery-picture">
+					<div class="block-img"><img src="https://picsum.photos/1000/1000" alt="img03"></div>
+				</li>
+				<li class="gallery-picture">
+					<div class="block-img"><img src="https://picsum.photos/100/100" alt="img04"></div>
+				</li>
+				<li class="gallery-picture">
+					<div class="block-img"><img src="https://picsum.photos/500/500" alt="img05"></div>
+				</li>
+				<li class="gallery-picture">
+					<div class="block-img"><img src="https://dummyimage.com/700x300" alt="img06"></div>
+				</li>
+				<li class="gallery-picture">
+					<div class="block-img"><img src="https://dummyimage.com/700x300" alt="img07"></div>
+				</li>
+				<li class="gallery-picture">
+					<div class="block-img"><img src="https://dummyimage.com/700x300" alt="img08"></div>
+				</li>
+				<li class="gallery-picture">
+					<div class="block-img"><img src="https://dummyimage.com/700x300" alt="img09"></div>
+				</li>
+			</ul>
+			<div class="gallery-pagination">
+				<button class="gallery-pagination-dot"></button>
+				<button class="gallery-pagination-dot"></button>
+				<button class="gallery-pagination-dot"></button>
+				<button class="gallery-pagination-dot"></button>
+				<button class="gallery-pagination-dot"></button>
+				<button class="gallery-pagination-dot"></button>
+				<button class="gallery-pagination-dot"></button>
+				<button class="gallery-pagination-dot"></button>
+				<button class="gallery-pagination-dot"></button>
+			</div>
+		</div>
+
+		<!--contacts-->
+		<section id="about" class="about-section position-relative overflow-hidden ptb-20 contacts">
+			<div class="container">
+				<div class="row align-items-center justify-content-between">
+					<div class="col-md-12 col-lg-6">
+						<div class="feature-contents section-heading">
+							<h2>Наши контакты</h2>
+							<div class="support-action d-inline-flex flex-wrap">
+								<a href="mailto:support@yourdomain.com" class="mr-3"><i
+										class="fas fa-comment mr-1 color-accent"></i>
+									<span>support@yourdomain.com</span></a>
+								<a href="tel:+00123456789" class="mb-0"><i
+										class="fas fa-phone-alt mr-1 color-accent"></i> <span>+00123456789</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-6">
+						<div class="image-wrap">
+							<iframe style="margin-bottom: -9px"
+								src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac46cd690a0ffbdb85606abc7ebee65867b880fd80fd101d0b3428f7d8bb8d866&amp;source=constructor"
+								width="100%" height="300" frameborder="0"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<!--footer section-->
+	<footer class="footer-1 ptb-40 gradient-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-lg-4 mb-4 mb-md-4 mb-sm-4 mb-lg-0">
+					<a href="#" class="navbar-brand mb-2">
+						<img src="https://dummyimage.com/70x70" alt="logo_school_min" class="img-fluid">
+					</a>
+					<br>
+					<p>(В самом низу ссылки на сайт витебского горисполкома, управления спорта и туризма витебского
+						облисполкома, минспорта, нок рб, сайт президента рб)</p>
+					<ul class="list-inline social-list-default background-color social-hover-2 mt-2">
+						<li class="list-inline-item"><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+						<li class="list-inline-item"><a class="youtube" href="#"><i class="fab fa-youtube"></i></a></li>
+						<li class="list-inline-item"><a class="linkedin" href="#"><i class="fab fa-linkedin-in"></i></a>
+						</li>
+						<li class="list-inline-item"><a class="dribbble" href="#"><i class="fab fa-dribbble"></i></a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-12 col-lg-8">
+					<div class="row mt-0">
+						<div class="col-sm-6 col-md-3 col-lg-3 mb-4 mb-sm-4 mb-md-0 mb-lg-0">
+							<h6 class="font-weight-normal">Resources</h6>
+							<ul>
+								<li>
+									<a href="#">Help</a>
+								</li>
+								<li>
+									<a href="#">Events</a>
+								</li>
+								<li>
+									<a href="#">Live sessions</a>
+								</li>
+								<li>
+									<a href="#">Open source</a>
+								</li>
+								<li>
+									<a href="#">Documentation</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-sm-6 col-md-3 col-lg-3 mb-4 mb-sm-4 mb-md-0 mb-lg-0">
+							<h6 class="font-weight-normal">Products</h6>
+							<ul>
+								<li>
+									<a href="#">Pricing</a>
+								</li>
+								<li>
+									<a href="#">Navigation</a>
+								</li>
+								<li>
+									<a href="#">AI Studio</a>
+								</li>
+								<li>
+									<a href="#">Page Speed </a>
+								</li>
+								<li>
+									<a href="#">Performance</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-sm-6 col-md-3 col-lg-3 mb-4 mb-sm-4 mb-md-0 mb-lg-0">
+							<h6 class="font-weight-normal">Company</h6>
+							<ul>
+								<li>
+									<a href="#">About Us</a>
+								</li>
+								<li>
+									<a href="#">Careers</a>
+								</li>
+								<li>
+									<a href="#">Customers</a>
+								</li>
+								<li>
+									<a href="#">Community</a>
+								</li>
+								<li>
+									<a href="#">Our Team</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-sm-6 col-md-3 col-lg-3">
+							<h6 class="font-weight-normal">Support</h6>
+							<ul>
+								<li>
+									<a href="#">FAQ</a>
+								</li>
+								<li>
+									<a href="#">Sells</a>
+								</li>
+								<li>
+									<a href="#">Contact Support</a>
+								</li>
+								<li>
+									<a href="#">Network Status</a>
+								</li>
+								<li>
+									<a href="#">Product Services</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- gos uslugi -->
+				<div class="gos-uslugi">
+					<ul>
+						<li><a href="https://vitebsk.gov.by/ru/" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Витебский облисполком"><img src="img/logo/logo_vitebsk_oblispolkom.jpg" alt="Витебский облисполком"></a></li>
+						<li><a href="http://www.tourvitebsk.gov.by/" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Управление спорта и туризма Витебского облисполкома"><img src="img/logo/logo_vitebsk_spotr_turizm.png" alt="Управление спорта и туризма Витебского облисполкома"></a></li>
+						<li><a href="https://mst.by/ru/" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Минестерство спорта и туризма РБ"><img src="img/logo/logo_minsport_turizm.png" alt="Минестерство спорта и туризма РБ"></a></li>
+						<li><a href="https://noc.by/" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Национальный олимпийский комитет РБ"><img src="img/logo/logo_nocby.png" alt="Национальный олимпийский комитет РБ"></a></li>
+						<li><a href="https://president.gov.by/ru" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Сайт президента РБ"><img src="img/logo/logo_site_prezident.jpg" alt="Сайт президента РБ"></a></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+		<!--end of container-->
+	</footer>
+
+	<!--build:js from pattern-->
+	<script src="js/vendors/jquery-3.5.1.min.js"></script>
+	<script src="js/vendors/popper.min.js"></script>
+	<script src="js/vendors/bootstrap.min.js"></script>
+	<script src="js/vendors/bootstrap-slider.min.js"></script>
+	<script src="js/vendors/jquery.easing.min.js"></script>
+	<script src="js/vendors/owl.carousel.min.js"></script>
+	<script src="js/vendors/countdown.min.js"></script>
+	<script src="js/vendors/jquery.waypoints.min.js"></script>
+	<script src="js/vendors/jquery.rcounterup.js"></script>
+	<script src="js/vendors/magnific-popup.min.js"></script>
+	<script src="js/vendors/validator.min.js"></script>
+	<script src="js/vendors/hs.megamenu.js"></script>
+	<script src="js/app.js"></script>
+
+	<!-- build:js from photo gallery -->
+	<script src="js/gallery.js"></script>
+</body>
+
+</html>

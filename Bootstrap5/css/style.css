@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+a {
+    font-size: 16px;
+}
+h1 {
+    font-weight: 300;
+    font-size: 72px;
+}
+@media screen and (max-width: 320px){
+    h1 {
+        font-size: 48px;
+    }
+}
+h5 {
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+}
+.stiky {
+    position: sticky;
+}
+.nlk {
+    font-size: 20px;
+}
+.portfolio {
+    background: #E9ECEF;
+    padding: 64px 0;
+    padding-left: ;
+}
+.portfolio_txt {
+    max-width: 635px;
+}
+.card {
+    margin-top: 32px;
+}
+.card p {
+    margin-bottom: 0;
+}
+.btn {
+    margin-top: 10px;
+}
+.table-block {
+    max-width: 320;
+    margin-top: 32px;
+    margin-bottom: 0;
+}
+.table {
+    overflow: auto;
+}
+.footer {
+    color: #6C757D;
+    background: #E9ECEF;
+    font-size: 16px;
+    padding: 16px 0;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 0;
+}

@@ -1,0 +1,418 @@
+header
+	position: relative
+	height: 50px
+
+nav
+	position: fixed
+	width: 100%
+	height: 50px
+	z-index: 2
+	background-color: #212121
+
+.menu
+	display: flex
+	padding: 10px 70px
+	margin: 0
+	justify-content: space-between
+	list-style: none
+
+.menu_item
+	border-right: 2px dotted black
+	padding-right: 28px
+	&:last-child
+		border: none
+
+.menu_link
+	text-decoration: none
+	color: #ffffff
+	font-size: 15px
+	font-weight: 300
+
+.hamburger
+	display: none
+
+.subheader
+	position: absolute
+	width: 100%
+	top: 50px
+	padding: 16px 0
+	background-color: rgba(0, 0, 0, 0.6)
+	.logo_link
+		display: block
+		min-width: 100%
+	.logo_txt
+		opacity: 0.5
+		color: #fff
+		font-size: 13px
+		font-weight: 100
+		text-align: left
+		margin-top: 3px
+
+.number_txt
+	color: #fff
+	font-size: 12px
+	font-weight: 300
+	text-align: right
+
+.number
+	display: block
+	text-decoration: none
+	color: #fff
+	font-size: 22px
+	font-weight: 400
+	text-align: right
+	line-height: 24px
+	text-transform: uppercase
+
+.subheader 
+	button
+		width: 172px
+		height: 46px
+		box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.12)
+		border: none
+		border-radius: 5px
+		background-image: linear-gradient(to top, #{$col_blue} 0%, #4ce2ff 100%)
+		text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21)
+		color: #fff
+		font-size: 14px
+		font-weight: 400
+		text-align: center
+		text-transform: uppercase
+		@include btn_hover
+	
+
+.promo
+	padding: 200px 0 135px
+	background: url("../img/bg/section_1.jpg") center / cover no-repeat
+	h1
+		margin: 0
+		color: #fff
+		font-size: 60px
+		line-height: 60px
+		font-weight: 700
+		text-align: center
+
+.subheader_promo
+	margin: 15px 0 0
+	color: #fff
+	font-size: 36px
+	line-height: 36px
+	font-weight: 700
+	text-align: center
+	text-transform: uppercase
+
+.promo_descr
+	margin-top: 15px
+	color: #fff
+	font-size: 18px
+	font-weight: 400
+	line-height: 24px
+	text-align: center
+
+.promo_btn
+	display: block
+	margin: 118px auto 0
+	width: 259px
+	height: 63px
+	box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.12)
+	border: none
+	border-radius: 5px
+	background-image: linear-gradient(to top, #{$col_blue} 0%, #4ce2ff 100%)
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21)
+	color: #fff
+	font-size: 18px
+	font-weight: 400
+	text-align: center
+	text-transform: uppercase
+	@include btn_hover
+
+.reason
+	padding: 70px 0 65px
+
+.lable
+	width: 112px
+	height: 25px
+	margin: 0 auto
+	padding: 5px 11px
+	background: #080816
+	color: #fff
+	font-size: 11px
+	font-weight: 300
+	text-transform: uppercase
+	text-align: center
+
+.title
+	margin-top: 28px
+	margin-bottom: 0
+	font-size: 38px
+	font-weight: 700
+	text-transform: uppercase
+	text-align: center
+
+.subtitle
+	color: #222
+	font-size: 17px
+	font-weight: 400
+	text-align: center
+
+.item
+	display: flex
+	align-items: center
+	margin-top: 30px
+
+.circle_icon
+	display: flex
+	justify-content: center
+	align-items: center
+	min-width: 115px
+	height: 115px
+	margin-right: 25px
+	border-radius: 50%
+	background: #{$col_blue}
+
+.item
+	p
+		max-width: 350px
+		color: #202020
+		font-size: 15px
+		font-weight: 300
+		line-height: 21px
+
+	span
+		color: #{$col_blue}
+		font-size: 17px
+		font-weight: 400
+		line-height: 21px
+
+.mobile
+	background: url('../img/bg/Rectangle.jpg') center/cover no-repeat
+	padding: 48px 0 80px
+	.row
+		margin-top: 32px
+	&_item
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: center
+		max-width: 320px
+		height: 280px
+		padding: 90px 0 35px
+		margin: 0 auto
+		margin-bottom: 19px
+		@for $i from 1 to 7
+			&_#{$i}
+				background: url('../img/bg/cards#{$i}.jpg') center/cover no-repeat
+		&_txt
+			color: #fff
+			font-size: 24px
+			line-height: 31px
+			text-transform: uppercase
+			text-align: center
+		&_plus
+			position: relative
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 26px
+			height: 26px
+			border-radius: 50%
+			background: #000
+			cursor: pointer
+			&::before
+				content: ''
+				width: 14px
+				height: 2px
+				background-color: $col_blue
+				transition: 0.5s all
+			&::after
+				position: absolute
+				content: ''
+				width: 2px
+				height: 14px
+				background-color: $col_blue
+				transition: 0.5s all
+			&:hover
+				&::before, &::after
+					background: $color_conditions_red
+					transform: rotate(0.5turn)
+				&::before
+					width: 22px
+					height: 4px
+				&::after
+					width: 4px
+					height: 22px	
+					
+.car
+	position: relative
+	max-height: 900px
+	padding: 55px 0 135px
+	background: url('../img/bg/Rectangle.jpg') center/cover no-repeat
+	z-index: -2
+
+	&_bg_black 
+		position: absolute
+		top: 0
+		z-index: -1
+		width: 100%
+		height: 500px
+		background: #{$col_black}
+	.lable
+		color: #{$col_black}
+		background: #fff
+	.title
+		color: #fff
+	.subtitle
+		color: #fff
+	img
+		display: block
+		margin: 55px auto 0
+		max-width: 100%
+	&_descr
+		color: #3d3d3d
+		font-size: 17px
+		font-weight: 300
+		line-height: 24px
+		text-align: center
+
+.conditions
+	padding: 65px 0 80px
+	&_item
+		margin: 30px 0
+		max-width: 450px
+		&_nmb
+			margin-bottom: 0
+		&_title
+			color: $color_conditions_blue
+			font-size: 22px
+			text-transform: uppercase
+			span 
+				text-transform: lowercase
+		&_list
+			margin-top: 10px
+			color: #222
+			font-size: 17px
+			font-weight: 300
+			line-height: 24px
+			list-style-type: none
+			li
+				position: relative
+				margin-bottom: 10px
+				font-size: 17px
+				font-weight: 
+				line-height: 24px
+				&::before
+					position: absolute
+					left: -31px
+					top: 3px
+					content: ''
+					display: block
+					width: 21px
+					height: 20px
+					background: url('../img/icons/check_blue.png') center/cover no-repeat
+		&_descr
+			color: $color_conditions_blue
+			font-size: 17px
+			font-weight: 300
+			line-height: 24px
+	.require
+		.conditions_item_title
+			color: $color_conditions_red
+		.conditions_item_list
+			li
+				&::before
+					background: url('../img/icons/check_red.png') center/cover no-repeat
+
+.world
+	position: relative
+	height: 717px
+	padding: 50px 0 50px
+	background: url('../img/bg/world_dotts.jpg') center/cover no-repeat
+	.lable
+		color: #{$col_black}
+		background: #fff
+	.title
+		color: #fff
+	.subtitle
+		color: #fff
+	a
+		position: absolute
+		bottom: 50px
+		left: 50%
+		transform: translateX(-50%)
+		text-decoration: none
+		font-size: 15px
+		color: #1fbad6
+		text-align: center
+		text-transform: uppercase
+
+.footer
+	display: flex
+	justify-content: space-between
+	padding: 13px 23px 30px
+	& > div
+		display: flex
+		width: 25%
+		align-items: center
+		&:nth-child(3)
+			justify-content: end
+		&:nth-child(2)
+			justify-content: center
+			width: 50%
+	&_social
+		display: flex
+		align-items: center
+		&_circle
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-right: 15px
+			width: 32px
+			height: 32px
+			border-radius: 50%
+			background: $col_black
+		i
+			color: #fff
+	&_site
+		&_divider
+			margin: 0 auto
+			max-width: 299px
+			height: 4px
+			background: #1fbad6
+		&_highlink
+			display: flex
+			justify-content: space-around
+			margin-top: 30px
+			a
+				text-decoration: none
+				font-size: 15px
+				font-weight: 300
+				color: $col_black
+				text-transform: uppercase
+		&_smalllink
+			display: flex
+			justify-content: space-between
+			margin-top: 10px
+			a
+				padding: 0 10px 0
+				text-decoration: none
+				font-size: 11px
+				font-weight: 300
+				color: #999
+				text-transform: uppercase
+		&_language
+			margin: 15px auto 0		
+			a
+				display: block
+				text-align: center
+				text-decoration: none
+				font-size: 11px
+				color: #1fbad6
+				text-transform: uppercase
+	&_application
+		display: flex
+		&_link
+			margin: 5px
+
+
+.xs-visible
+	display: none
